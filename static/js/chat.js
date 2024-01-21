@@ -52,13 +52,13 @@ document.querySelector('#chat-message-submit').onclick = function(e){
     message_input.value = '';
 }
 
-const messageInput = JSON.parse(document.getElementById('message_input'));
+const messageInput = document.getElementById('message_input');
 
 messageInput.addEventListener('keyup', function(event) {
     if (event.key === 'Enter') {
-        
+
         event.preventDefault();
-        
+
        const message = messageInput.value.trim();
 
        if(message !== ''){

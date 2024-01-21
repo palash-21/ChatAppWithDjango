@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}ChatApp{% endblock %}
+
 
 {% block css %}
 <link rel="stylesheet" href="{% static 'css/index.css' %}">
@@ -9,10 +9,9 @@
 
 {% block content %}
 <div class="back-container">
-<!--    <div class="container-fluid front-container">-->
-<!--        <div class="back-top"></div>-->
-<!--        <div class="back-main"></div>-->
-<!--    </div>-->
+    <div class="container-fluid front-container">
+
+    </div>
     <div class="container front-container1">
         <div class="row">
             <div class="col-sm-4 contacts">
@@ -23,11 +22,9 @@
                             <tr>
                                 <td><img src="{% static 'assets/dp.png' %}" alt="" class="profile-image rounded-circle">
                                 </td>
-                                <td><a href="">{{user.username}}</a></td>
+                                <td><a href="{% url 'chat' username=user.username %}">{{user.username}}</a></td>
                             </tr>
                             {% endfor %}
-
-                            <!-- end -->
                         </tbody>
                     </table>
                 </div>
