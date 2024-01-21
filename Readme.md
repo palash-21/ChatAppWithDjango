@@ -2,10 +2,10 @@
 Real-time ChatApp with Django
 
 # Features
-Private chat app
-Redis used as a message broker
-Chats stored in database
-Offline/Online status shown
+-Private chat app
+-Redis used as a message broker
+-Chats stored in database
+-Offline/Online status shown
 
 
 #  Register
