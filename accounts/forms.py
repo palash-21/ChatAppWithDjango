@@ -1,8 +1,26 @@
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import get_user_model
+from django import forms
 
 
 class SignUpForm(UserCreationForm):
+    GENDER_CHOICES = (
+        ("M", "Male"),
+        ("F", "Female"),
+    )
+    INTEREST_CHOICES = (
+        ("1", "Python"),
+        ("2", "Golang"),
+        ("3", "SQL"),
+        ("4", "Docker"),
+        ("5", "Azure"),
+        ("6", "FastAPI"),
+        ("7", "Django"),
+        ("8", "Flask"),
+    )
+    phone = forms.CharField(max_length=12)
+    gender = forms.ChoiceField(choices=GENDER_CHOICES)
+    interests = forms.MultipleChoiceField(choices = INTEREST_CHOICES)
 
     class Meta:
         model = get_user_model()
