@@ -1,11 +1,11 @@
 # ChatAppWithDjango
 Real-time ChatApp with Django using django=channels, websockets, redis.  
 
-# Features
--Private chat app
--Redis used as a message broker
--Chats stored in database
--Offline/Online status shown
+# Features:
+- Private chat app
+- Redis used as a message broker
+- Chats stored in database
+- Offline/Online status shown
 
 
 #  Register
