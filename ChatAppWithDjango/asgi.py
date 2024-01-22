@@ -17,7 +17,7 @@ from channels.routing import ProtocolTypeRouter, URLRouter
 
 from channels.auth import AuthMiddlewareStack
 
-from ChatApp.consumers import PersonalChatConsumer, OnlineStatusConsumer, NotificationConsumer
+from ChatApp.consumers import PersonalChatConsumer, OnlineStatusConsumer
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'ChatAppWithDjango.settings')
 
@@ -27,8 +27,7 @@ application = ProtocolTypeRouter({
     'websocket': AuthMiddlewareStack(
         URLRouter([
             path('ws/<int:id>/', PersonalChatConsumer.as_asgi()),
-            path('ws/online/', OnlineStatusConsumer.as_asgi()),
-            path('ws/notify/', NotificationConsumer.as_asgi())
+            path('ws/online/', OnlineStatusConsumer.as_asgi())
         ])
     )
 })
