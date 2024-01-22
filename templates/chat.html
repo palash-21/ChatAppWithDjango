@@ -58,6 +58,7 @@
                                 {% else %}
                                 <td><a style="color: grey" id="{{user.username}}_status" href="{% url 'chat' username=user.username %}">{{user.username}}</a></td>
                                 {% endif %}
+
                             </tr>
                             {% endfor %}
 
@@ -125,5 +126,4 @@
 {% block javascript %}
 <script src="{% static 'js/chat.js' %}"></script>
 <script src="{% static 'js/online_status.js' %}"></script>
-<script src="{% static 'js/notify.js' %}"></script>
 {% endblock %}
